@@ -28,6 +28,7 @@ jobs:
         with:
           repository: h4rvey-g/ob-Notes
           path: content
+          token: ${{ secrets.ACCESS_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
