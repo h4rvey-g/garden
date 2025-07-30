@@ -1,3 +1,28 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+// 根据你的建议调整字体大小
+
+// 1. 正文设置为 18px
+body {
+  font-size: 18px;
+}
+
+// 2. 调整标题层级
+h1 {
+  font-size: 38px; // 介于 36px-40px 之间
+}
+
+h2 {
+  font-size: 32px; // 介于 29px-38px 之间
+}
+
+h3 {
+  font-size: 28px; // 介于 28px-30px 之间
+}
+
+// 3. 稍微增大代码块字体
+pre > code {
+  font-size: 0.95rem;
+}
