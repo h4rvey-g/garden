@@ -32,6 +32,18 @@ jobs:
           path: content
           token: ${{ secrets.ACCESS_TOKEN }}
 
+      - name: Clean up content directory
+        run: |
+          rm -rf content/.git
+          rm -rf content/.github
+          rm -rf content/.obsidian
+          rm -f content/.DS_Store
+          rm -f content/.obsidian.vimrc
+          rm -rf content/.smtcmp_chat_histories
+          rm -f content/.smtcmp_vector_db.tar.gz
+          rm -rf content/.trash
+          rm -f content/sync.ffs_db
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
