@@ -5,7 +5,7 @@ on:
     - cron: '0 0 */2 * *'
   push:
     branches:
-      - v5-update
+      - v5
   workflow_dispatch:
 
 permissions:
