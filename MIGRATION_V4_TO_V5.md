@@ -80,17 +80,32 @@ Your v4 layout has been preserved in v5 format:
 - Component/plugin architecture has changed
 - Custom components may need to be rewritten
 
+## Deployment Status
+
+✅ **Branch pushed**: `v5-update`
+✅ **GitHub Actions**: Updated for v5 with plugin installation
+✅ **Content sync**: Configured to pull from `h4rvey-g/ob-Notes`
+
+The GitHub Actions workflow will automatically:
+1. Install dependencies and Quartz plugins
+2. Pull content from your ob-Notes repository
+3. Build the site
+4. Deploy to GitHub Pages
+
+Check the Actions tab in your GitHub repository to monitor the deployment.
+
 ## Next Steps
 
-1. **Test the build**:
+1. **Merge to main branch** (when ready):
    ```bash
-   npx quartz build
+   git checkout v4
+   git merge v5-update
+   git push
    ```
+   Or create a pull request on GitHub to review changes before merging.
 
-2. **Update dependencies**:
-   ```bash
-   npm install
-   ```
+2. **Update the workflow branch** (after merging):
+   Edit `.github/workflows/deploy.yml` and change the branch from `v5-update` to your main branch (e.g., `v4` or `main`).
 
 3. **Customize footer links** in `quartz.config.yaml`:
    ```yaml
